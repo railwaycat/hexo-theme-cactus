@@ -113,27 +113,27 @@
 <!-- utterances Comments -->
 <% if (page.comments && theme.utterances.enabled && theme.utterances.repo && theme.utterances.issue_term && theme.utterances.theme){ %>
     <script type="text/javascript">
-      var utterances_repo = '<%= theme.utterances.repo %>';
-      var utterances_issue_term = '<%= theme.utterances.issue_term %>';
-      var utterances_label = '<%= theme.utterances.label %>';
-      var utterances_theme = '<%= theme.utterances.theme %>';
+     var utterances_repo = '<%= theme.utterances.repo %>';
+     var utterances_issue_term = '<%= theme.utterances.issue_term %>';
+     var utterances_label = '<%= theme.utterances.label %>';
+     var utterances_theme = '<%= theme.utterances.theme %>';
 
-      (function(){
-          var script = document.createElement('script');
+     (function(){
+         var script = document.createElement('script');
 
-          script.src = 'https://utteranc.es/client.js';
-          script.setAttribute('repo', utterances_repo);
-          script.setAttribute('issue-term', 'pathname');
-          script.setAttribute('label', utterances_label);
-          script.setAttribute('theme', utterances_theme);
-          script.setAttribute('crossorigin', 'anonymous');
-          script.async = true;
-          (document.getElementById('utterances_thread')).appendChild(script);
-      }());
-  </script>
+         script.src = 'https://utteranc.es/client.js';
+         script.setAttribute('repo', utterances_repo);
+         script.setAttribute('issue-term', 'pathname');
+         script.setAttribute('label', utterances_label);
+         script.setAttribute('theme', utterances_theme);
+         script.setAttribute('crossorigin', 'anonymous');
+         script.async = true;
+         (document.getElementById('utterances_thread')).appendChild(script);
+     }());
+    </script>
 <% } %>
 <!-- Remark42 Comments -->
-<% if (page.comments && theme.remark42.enabled && theme.remark42.host && theme.remark42.site_id && theme.remark42.theme){ %>
+<% if (env.cmd === 'generate' && page.comments && theme.remark42.enabled && theme.remark42.host && theme.remark42.site_id && theme.remark42.theme){ %>
     <script>
      var remark_config = {
          host: '<%= theme.remark42.host %>',
