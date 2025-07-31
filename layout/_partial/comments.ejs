@@ -18,3 +18,14 @@
         </div>
     </div>
 <% } %>
+<% if(page.comments && theme.mastodon.enabled){ %>
+    <div class="blog-post-comments">
+        <div class="mastodon-comment-section">
+            <hr>
+            <p>网站的讨论区设置在我的 Mastodon 实例上，欢迎在对应的嘟文下留下回复：</p>
+            <a href="<%- theme.mastodon.comment_url %>" class="button" target="_blank" rel="noopener noreferrer">
+                前往 Mastodon 🐘
+            </a>
+        </div>
+    </div>
+<% } %>
