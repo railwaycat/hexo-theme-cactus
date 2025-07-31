@@ -180,6 +180,18 @@ utterances:
   label: Comment
   theme: github-dark
 
+# Fill in your Remark42 data to enable Remark42 comments
+remark42:
+  enabled: false
+  host: 'your remark42 host'
+  site_id: 'your remark42 site id'
+  theme: 'light' # or 'dark'
+
+# Fill in your Mastodon (or other Fediverse) data to enable Fediverse comment link
+mastodon:
+  enabled: false
+  comment_url: 'link to your fediverse account'
+
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
   enabled: false
